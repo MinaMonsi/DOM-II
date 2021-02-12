@@ -17,10 +17,13 @@ introImg.addEventListener("mouseenter", () => {
  });
 
 
-const navLinks = document.querySelector(".nav-link");
+const navLinks = document.querySelectorAll(".nav-link");
 //console.log(navLinks);
 
-navLinks.addEventListener('focus',(event) => {
-  event.target.style.background = 'yellow';
-  event.target.style.color = "red";
+navLinks.forEach(links => {
+  links.addEventListener('focus',(event) => {
+    event.target.style.color = "red"
+    event.target.style.background = "yellow"
+  })
 });
+
