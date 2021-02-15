@@ -42,11 +42,40 @@ const imgContent = document.querySelector(".img-content img");
    event.stopPropagation();
    event.target.style.backgroundColor = "aqua";
    event.target.style.color = "#7a38f5"
-   console.log("End destination content.")
+  //  console.log("End destination content.")
  })
 
  //7. WHEEL EventListner
- const advAwaits = document.querySelector(".text-content");
- console.log(advAwaits);
+ const fun = document.querySelector(".text-content h2");
+ //console.log(fun);
+fun.addEventListener("wheel", () => {
+  fun.style.transform = "scale(.7)";
+  fun.style.transition = "all 0.5s";
+});
 
- 
+//8. SCROLL EventListner
+ window.addEventListener('scroll', (event) => {
+   if (window.scrollY >= 200) {
+     alert("scrolled")
+   }
+ })
+
+//9. DBLCLICK EventListner
+const home = document.querySelector(".intro p");
+//console.log(home);
+ home.addEventListener("dblclick", (event) => {
+   event.target.style.backgroundColor = "papayawhip"
+   console.log("dblclick works")
+ });
+
+//10. MOUSEOUT EventListner
+const bottomText = document.querySelectorAll(".content-pick p");
+//console.log(bottomText);
+ bottomText.forEach(text => {
+   text.addEventListener("mouseout", (event) => {
+    event.target.style.backgroundColor = "#8feb34";
+    event.target.style.color = "white";
+   })
+ });
+
+
