@@ -6,7 +6,7 @@ logo.addEventListener("click", (e) => {
 });
 
 //2. LOAD EventListner
-window.addEventListener("load", (e) => {
+window.addEventListener("load", (event) => {
   console.log(`${event.type} happened`);
 });
 
